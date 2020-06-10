@@ -3,7 +3,7 @@
 //JS does not have a handy python stringXnum multiply option
 function multipleChar(char, multiple) {
   
-  let str = '  ';
+  let str = '';
 // break connection as soon as it hits 0
   for (let i = multiple; i > 0; i--) {
     str = str + char;

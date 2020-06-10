@@ -31,17 +31,20 @@ function tabular(dataArr) {
 
   outputHorizontalBorder( getTableWidth(dataArr) );
 }
-
-function remainingPadding(default_padding, element_length, table_width) {
-	
-	return ( (table_width - element_length) + default_padding);
+// This function calculates how many spaces requires after a name to fill up the table until the righthand side border
+function remainingPadding(final_padding, element_length, table_width) {
+	// Table padding is a default value, do not change it
+	return ( (table_width - element_length) + final_padding);
 }
-
+// Use longest string in table as width
+// 1. Need function for width of table
+// 2. Width of table must always be more than or same as longest piece of content
+// 3. Each line contains only 1 string there for longest string = table width 
 function getTableWidth(dataArr) {
-
+// Sort the array, positions longest string at zero
   dataArr.sort(sortByLength);
   //Q. do we need parantheses? Add to notes
-
+// returns the length of that string
   return dataArr[0].length;
 }
 
