@@ -18,7 +18,13 @@ function tabular(dataArr) {
     v_border_char +
     multipleChar(table_padding_char, table_padding) +
     element +
-    multipleChar(table_padding_char, remainingPadding( table_padding, element.length, getTableWidth(dataArr)),
+    multipleChar(
+      table_padding_char, 
+      remainingPadding( 
+        table_padding, 
+        element.length, 
+        getTableWidth(dataArr)
+      ),
     ) +
     v_border_char
   ));
